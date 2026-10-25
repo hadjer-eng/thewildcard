@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050304;
+    color: #f3e9e7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 48%,
+            rgba(105, 7, 30, 0.35),
+            transparent 48%
+        ),
+        linear-gradient(
+            135deg,
+            #030203 5%,
+            #19050c 48%,
+            #390714 75%,
+            #080304 100%
+        );
+}
+
+.glow {
+    position: absolute;
+    z-index: -1;
+    width: 420px;
+    height: 280px;
+    background: #7b102d;
+    filter: blur(120px);
+    opacity: 0.22;
+    animation: glow 7s ease-in-out infinite alternate;
+}
+
+.smoke {
+    position: absolute;
+    z-index: -1;
+    width: 75vw;
+    height: 55vh;
+    left: -15%;
+    bottom: -10%;
+    pointer-events: none;
+    filter: blur(55px);
+    opacity: 0.2;
+
+    background:
+        radial-gradient(
+            ellipse at 30% 50%,
+            rgba(150, 65, 83, 0.65),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse at 70% 40%,
+            rgba(75, 10, 31, 0.8),
+            transparent 55%
+        );
+
+    animation: smokeMove 16s ease-in-out infinite alternate;
+}
+
+.smoke-two {
+    width: 70vw;
+    height: 60vh;
+    left: auto;
+    right: -20%;
+    top: -10%;
+    bottom: auto;
+    opacity: 0.13;
+    animation-delay: -8s;
+    animation-duration: 20s;
+}
+
+.content {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    animation: appear 1.8s ease both;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 6px;
+    color: #c58b98;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(42px, 8vw, 94px);
+    letter-spacing: 5px;
+    line-height: 1.1;
+    text-shadow: 0 0 35px rgba(126, 20, 48, 0.2);
+}
+
+h1 span {
+    color: #b76b7e;
+}
+
+.line {
+    width: 65px;
+    height: 1px;
+    margin: 28px auto 20px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #bc7889,
+        transparent
+    );
+}
+
+.subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 23px;
+    font-style: italic;
+    color: #cbb9bd;
+    letter-spacing: 1px;
+    margin-bottom: 42px;
+}
+
+.enter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 23px;
+    border: 1px solid rgba(194, 121, 141, 0.45);
+    color: #f1e3e7;
+    text-decoration: none;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    transition: 0.4s ease;
+}
+
+.enter-button span {
+    color: #c47a8e;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.enter-button:hover {
+    background: rgba(115, 15, 42, 0.25);
+    border-color: #bd7489;
+    box-shadow: 0 0 30px rgba(112, 12, 40, 0.2);
+}
+
+.enter-button:hover span {
+    transform: translate(3px, -3px);
+}
+
+.footer {
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    right: 15px;
+    text-align: center;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #79646b;
+}
+
+@keyframes smokeMove {
+    from {
+        transform: translate(-5%, 5%) rotate(-8deg) scale(1);
+    }
+
+    to {
+        transform: translate(15%, -10%) rotate(8deg) scale(1.2);
+    }
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.14;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        letter-spacing: 2px;
+    }
+}

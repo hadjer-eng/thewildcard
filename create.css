@@ -1,0 +1,71 @@
+/* Extra styles for create.html (loaded after style.css) */
+
+.hidden { display: none !important; }
+
+.page-title {
+    font-size: clamp(34px, 6vw, 60px);
+}
+
+#setup, #stage {
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 16px;
+    background: rgba(5, 3, 4, 0.6);
+    border: 1px solid rgba(194, 121, 141, 0.35);
+    color: #f3e9e7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    resize: vertical;
+    transition: 0.3s ease;
+}
+
+textarea::placeholder { color: #79646b; }
+
+textarea:focus {
+    outline: none;
+    border-color: #bd7489;
+    box-shadow: 0 0 30px rgba(112, 12, 40, 0.25);
+}
+
+.count {
+    margin: 12px 0 4px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #c58b98;
+}
+
+.error {
+    min-height: 20px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: #e8a0ae;
+}
+
+button.enter-button {
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button.enter-button.ghost {
+    border-color: rgba(194, 121, 141, 0.2);
+    color: #b9a3a9;
+}
+
+.enter-button:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #c47a8e;
+    outline-offset: 3px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}

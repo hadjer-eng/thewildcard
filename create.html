@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wild Card | Pick a card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+    <main class="hero">
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+        <div class="glow"></div>
+
+        <div class="content">
+
+            <section id="setup">
+
+                <h1 class="page-title">Who's in the deck?</h1>
+                <div class="line"></div>
+                <p class="subtitle">Paste the Instagram accounts, one per line.</p>
+
+                <textarea id="accounts" rows="7" spellcheck="false"
+                    placeholder="@account_one&#10;@account_two&#10;instagram.com/account_three"></textarea>
+
+                <p id="count" class="count">0 accounts</p>
+                <p id="error" class="error" role="alert"></p>
+
+                <button id="drawBtn" class="enter-button" type="button">Shuffle the deck</button>
+            </section>
+
+            <section id="stage" class="hidden" aria-live="polite">
+                <p id="stageText" class="stage-text"></p>
+                <div class="deck" id="deck"></div>
+
+                <div class="actions hidden" id="actions">
+                    <button id="againBtn" class="enter-button" type="button">Shuffle again</button>
+                    <button id="backBtn" class="enter-button ghost" type="button">Edit the deck</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
